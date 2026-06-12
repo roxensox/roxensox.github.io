@@ -1,0 +1,37 @@
+body {
+	max-width: 760px;
+	margin: 0 auto;
+	padding: 2rem;
+	font-family: system-ui, sans-serif;
+	line-height: 1.6;
+	color: #1f2933;
+	background: #f8fafc;
+}
+
+header {
+	margin-bottom: 3rem;
+	border-bottom: 1px solid #d9e2ec;
+}
+
+nav {
+	display: flex;
+	gap: 1rem;
+	margin: 1rem 0;
+}
+
+a {
+	color: #0b6bcb;
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+	margin-top: 1rem;
+}
+
+th,
+td {
+	border: 1px solid #d9e2ec;
+	padding: 0.75rem;
+	text-align: left;
+}
