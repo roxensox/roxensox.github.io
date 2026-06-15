@@ -36,6 +36,7 @@ td {
 	text-align: left;
 }
 
+/* Code block formatting */
 .highlighter-rouge {
 	max-width: 100%;
 	overflow-x: auto;
@@ -64,4 +65,57 @@ pre code {
 	width: max-content;
 	min-width: 100%;
 	white-space: pre;
+}
+
+/* Dropdown formatting */
+.site-nav {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	margin: 1rem 0;
+}
+
+.site-nav a,
+.nav-dropdown__button {
+	color: #0b6bcb;
+	font: inherit;
+	background: none;
+	border: 0;
+	padding: 0;
+	cursor: pointer;
+	text-decoration: underline;
+}
+
+.nav-dropdown {
+	position: relative;
+}
+
+.nav-dropdown__menu {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	z-index: 10;
+	display: none;
+	min-width: 14rem;
+	padding: 0.5rem;
+	border: 1px solid #d9e2ec;
+	border-radius: 6px;
+	background: #ffffff;
+	box-shadow: 0 12px 30px rgba(15, 23, 42, 0.12);
+}
+
+.nav-dropdown__menu a {
+	display: block;
+	padding: 0.45rem 0.6rem;
+	text-decoration: none;
+}
+
+.nav-dropdown__menu a:hover,
+.nav-dropdown__menu a:focus {
+	background: #f1f5f9;
+}
+
+.nav-dropdown:hover .nav-dropdown__menu,
+.nav-dropdown:focus-within .nav-dropdown__menu {
+	display: block;
 }

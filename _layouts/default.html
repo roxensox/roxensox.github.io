@@ -14,6 +14,18 @@
 		<nav>
 			<a href="{{ '/' | relative_url }}">Home</a>
 			<a href="{{ '/travlr/' | relative_url }}">Travlr</a>
+			<div class="nav-dropdown">
+				<button class="nav-dropdown__button" type="button">
+					Narratives
+				</button>
+				<div class="nav-dropdown__menu">
+					<a href="{{ '/travlr/narratives/databases' | relative_url }}">Databases</a>
+					<a href="{{ '/travlr/narratives/dsa' | relative_url }}">Algorithms and Data
+						Structures</a>
+					<a href="{{ '/travlr/narratives/software-engineering' | relative_url }}">Software
+						Engineering</a>
+				</div>
+			</div>
 		</nav>
 	</header>
 	<main>

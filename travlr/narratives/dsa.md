@@ -120,7 +120,9 @@ func TestValidateToken(t *testing.T) {
 	if err != nil {
 		t.Fatalf("GenerateToken returned error: %v", err)
 	}
+}
 ```
+
 
 ```
 tests := []struct {
