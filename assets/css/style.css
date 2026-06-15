@@ -35,3 +35,11 @@ td {
 	padding: 0.75rem;
 	text-align: left;
 }
+
+.highlight {
+	max-height: 500px;
+	overflow: auto;
+	border: 1ps solid #444;
+	border-radius: 6px;
+	background: #1e1e1e;
+}
