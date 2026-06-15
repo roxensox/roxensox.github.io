@@ -36,6 +36,17 @@ td {
 	text-align: left;
 }
 
+.highlighter-rouge {
+	max-width: 100%;
+	overflow-x: auto;
+}
+
+.highlighter-rouge .highlight {
+	margin: 0;
+	overflow-x: auto;
+}
+
+.highlighter-rouge pre.highlight,
 pre {
 	max-width: 100%;
 	max-height: 500px;
@@ -47,17 +58,10 @@ pre {
 	padding: 1rem;
 }
 
+.highlighter-rouge code,
 pre code {
 	display: block;
-	min-width: max-content;
+	width: max-content;
+	min-width: 100%;
 	white-space: pre;
-}
-
-.highlight {
-	max-width: 100%;
-	overflow: auto;
-}
-
-.highlight pre {
-	margin: 0;
 }
