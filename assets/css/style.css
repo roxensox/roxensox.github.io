@@ -73,16 +73,14 @@ pre code {
 	align-items: center;
 	gap: 1rem;
 	margin: 1rem 0;
+	flex-wrap: wrap;
 }
 
 .site-nav a,
-.nav-dropdown__button {
+.nav-dropdown summary {
 	color: #0b6bcb;
-	font: inherit;
-	background: none;
-	border: 0;
-	padding: 0;
 	cursor: pointer;
+	font: inherit;
 	text-decoration: underline;
 }
 
@@ -90,12 +88,27 @@ pre code {
 	position: relative;
 }
 
+.nav-dropdown summary {
+	list-style: none;
+}
+
+.nav-dropdown summary::-webkit-details-marker {
+	display: none;
+}
+
+.nav-dropdown summary::after {
+	content: " ▾";
+}
+
+.nav-dropdown[open] summary::after {
+	content: " ▴";
+}
+
 .nav-dropdown__menu {
 	position: absolute;
 	top: 100%;
 	left: 0;
 	z-index: 10;
-	display: none;
 	min-width: 14rem;
 	padding: 0.5rem;
 	border: 1px solid #d9e2ec;
@@ -113,9 +126,4 @@ pre code {
 .nav-dropdown__menu a:hover,
 .nav-dropdown__menu a:focus {
 	background: #f1f5f9;
-}
-
-.nav-dropdown:hover .nav-dropdown__menu,
-.nav-dropdown:focus-within .nav-dropdown__menu {
-	display: block;
 }
