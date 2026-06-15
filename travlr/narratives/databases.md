@@ -20,7 +20,7 @@ Migrating from MongoDB to PostgreSQL required redesigning the application’s da
 
 To support this migration, I used Goose migrations to create and manage the database schema through version-controlled SQL artifacts. This approach preserves a clear history of schema evolution while also making deployment and database initialization repeatable on new systems.
 
-```
+```sql
 -- +goose Up
 CREATE TABLE trips (
 	code TEXT PRIMARY KEY NOT NULL,
