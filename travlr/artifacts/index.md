@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Travlr
+title: Artifacts
 ---
 
 # Travlr Getaways - Artifacts

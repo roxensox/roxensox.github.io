@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Travlr
+title: API
 ---
 
 # Software Engineering Enhancement - REST API Endpoints

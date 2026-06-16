@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Travlr
+title: Authentication
 ---
 
 # Algorithms and Data Structures Enhancement - Authentication Workflow
