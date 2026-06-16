@@ -33,13 +33,8 @@ Travlr Getaways is a full-stack project completed using the MEAN stack for my fu
 | | Designed database access middleware| Improved JWT handling|
 
 
-## Architecture
-
-*//IN PROGRESS//*
-
 ## Capstone Code Review
 
 [![Code Review](https://img.youtube.com/vi/Ykzun9Gxig0/hqdefault.jpg)](https://youtu.be/Ykzun9Gxig0)
 
-This is a review of the before-state code for my capstone project.
-
+This code review examines the original Travlr Getaways application before enhancement. The review discusses the existing functionality, analyzes architectural strengths and weaknesses, identifies opportunities for improvement, and outlines the software engineering, database, and algorithms/data structures enhancements implemented during the capstone project.

@@ -10,7 +10,9 @@ Some particularly notable components of this enhancement are my use of Goose mig
 
 ## Original Design
 
-The original implementation used MongoDB as its database layer and Express as its backend framework. While the application was functional, it relied on a document-oriented database and Javascript-based backend architecture. As part of this enhancement, I redesigned the data layer to use PostgreSQL while preserving compatibility with the existing Angular front end.
+The original implementation used MongoDB as its database layer and Express as its backend framework. While the application was functional, it relied on a document-oriented database and Javascript-based backend architecture. As part of this enhancement, I redesigned the data layer to use PostgreSQL while preserving compatibility with the existing Angular front end. The schema is defined in the following image.
+
+![schema diagram](../../assets/images/TravlrDatabaseSchema.png)
 
 A major goal of this enhancement was demonstrating that the data layer and application layer could be replaced independently as long as the API contract remained consistent.
 
@@ -20,7 +22,7 @@ Migrating from MongoDB to PostgreSQL required redesigning the application’s da
 
 To support this migration, I used Goose migrations to create and manage the database schema through version-controlled SQL artifacts. This approach preserves a clear history of schema evolution while also making deployment and database initialization repeatable on new systems.
 
-```sql
+```
 -- +goose Up
 CREATE TABLE trips (
 	code TEXT PRIMARY KEY NOT NULL,
