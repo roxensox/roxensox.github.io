@@ -1,9 +1,11 @@
 ---
 layout: default
 title: Authentication
+permalink: /travlr/artifacts/authentication/
 ---
 
-# Algorithms and Data Structures Enhancement - Authentication Workflow
+# Algorithms and Data Structures Enhancement
+# Authentication Workflow
 
 ## Source Code
 
@@ -11,7 +13,7 @@ Enhanced authentication code can be found in [`/go_server/internal/auth/password
 
 ## Password Hashing
 
-In this enhancement, I used the Argon2id password hashing algorithm to hash passwords for secure storage in the database. In the original implementation, passwords were hashed using PBKDF2-HMAC-SHA512, which is substantially less resistent to modern password-cracking attacks than properly implemented Argon2id hashing, but much simpler to implement. See the snippet below for the password hashing technique used in the Express implementation.
+In this enhancement, I used the Argon2id password hashing algorithm to hash passwords for secure storage in the database. In the original implementation, passwords were hashed using PBKDF2-HMAC-SHA512, which is substantially less resistant to modern password-cracking attacks than properly implemented Argon2id hashing, but much simpler to implement. See the snippet below for the password hashing technique used in the Express implementation.
 
 ```javascript
 userSchema.methods.setPassword = function (password) {
@@ -174,7 +176,7 @@ func ValidateToken(tokenString string, publicKey *rsa.PublicKey) (jwt.MapClaims,
 }
 ```
 
-The enhanced implementation also uses RSA256 keypairs to sign tokens, virtually guaranteeing token integrity and greatly strengthening security.
+The enhanced implementation also uses RSA256 keypairs to sign tokens, strongly supporting token integrity when the private key is protected.
 
 ## JWTs and RS256
 

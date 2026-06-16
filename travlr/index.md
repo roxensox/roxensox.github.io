@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Travlr
+permalink: /travlr/
 ---
 
 ## Overview

@@ -1,9 +1,11 @@
 ---
 layout: default
 title: API
+permalink: /travlr/artifacts/endpoints/
 ---
 
-# Software Engineering Enhancement - REST API Endpoints
+# Software Engineering Enhancement 
+# REST API Endpoints
 
 ## Routes
 

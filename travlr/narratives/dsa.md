@@ -1,6 +1,7 @@
 ---
 layout: default
 title: DSA
+permalink: /travlr/narratives/dsa/
 ---
 
 # Security Enhancement
