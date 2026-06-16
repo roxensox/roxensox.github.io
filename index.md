@@ -3,8 +3,6 @@ layout: default
 title: Home
 permalink: /
 ---
-
-# Ryan Hoveskeland
 ## Professional Self-Assessment
 
 I've learned a lot and built a skillset that's both broad and deep throughout my time in Southern New Hampshire University's Computer Science program. I've gained technical skills that allow me to work comfortably in new environments, identify project constraints and how to work around them, and how to contribute meaningfully to existing codebases by developing robust and secure features. My coursework included subjects like database design, cybersecurity, full-stack development, data structures and algorithms, and software test implementation. The projects included in this ePortfolio demonstrate both my technical knowledge acquired during the program as well as my ability to apply that knowledge to real-world software development challenges.

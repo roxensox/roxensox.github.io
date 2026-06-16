@@ -1,3 +1,8 @@
+---
+layout: default
+title: Travlr
+---
+
 # Travlr Getaways - Artifacts
 
 ## Source Code
@@ -12,7 +17,7 @@ The original Travlr Getaways implementation was completed as SNHU coursework and
 
 ## Overview
 
-The enhanced artifact has a configurable backend server implemented in Go, with a much smaller file footprint than the original Express backend. It is also set up for production deployment, and has been deployed as a live demo at [hoveskeland-travlr.vercel.app](hoveskeland-travlr.vercel.app). To run in a local environment, follow the instructions in the GitHub repository's `README.md`.
+The enhanced artifact has a configurable backend server implemented in Go, with a much smaller file footprint than the original Express backend. It is also set up for production deployment, and has been deployed as a live demo at [https://hoveskeland-travlr.vercel.app](hoveskeland-travlr.vercel.app). To run in a local environment, follow the instructions in the GitHub repository's `README.md`.
 
 In the live demo, the authentication flow can be accessed using the following credentials:
 

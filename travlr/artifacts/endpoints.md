@@ -1,3 +1,8 @@
+---
+layout: default
+title: Travlr
+---
+
 # Software Engineering Enhancement - REST API Endpoints
 
 ## Routes
@@ -6,7 +11,7 @@ Endpoint routes are defined in [`/go_server/main.go`](https://github.com/roxenso
 
 Here is the original implementation of the API routes in the MEAN stack, before enhancement:
 
-```
+```javascript
 router.route('/register').post(authController.register);
 router.route('/login').post(authController.login);
 
@@ -53,7 +58,7 @@ function authenticateJWT(req, res, next) {
 
 And here is the Go version, after enhancement:
 
-```
+```go
 // Trip reads remain public, while trip writes require JWT middleware.
 sMux.HandleFunc("GET /api/trips", cfg.GETTrips)
 sMux.HandleFunc("POST /api/trips", cfg.RequireAuth(cfg.POSTTrips))
@@ -73,7 +78,7 @@ The Go version is clearly much more explicit about middleware composition, suppo
 
 In contrast, the original implementation of the application had much simpler definitions for backend behavior due to the homogeneity of the MEAN stack. Because all data items were native JSON, no considerations needed to be made for data shape, while the Go implementation had to decode and marshal data between Go structs and JSON data; however, the extra complication in the Go implementation provided opportunities to validate data and improve security. The code snippets below include the API method definitions for the `/trips` endpoint:
 
-```
+```javascript
 // GET: /trips - lists all the trips
 // Regardless of outcome, response must include HTTP status code
 // and JSON message to the requesting client
@@ -120,7 +125,7 @@ const tripsAddTrip = async(req, res) => {
 
 Go version:
 
-```
+```go
 // GETTrips handles the public trip listing endpoint used by the Angular app.
 // It reads all trip records, maps database dates into HTML date strings, and
 // returns the frontend-compatible trip list as JSON.

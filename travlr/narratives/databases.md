@@ -1,3 +1,8 @@
+---
+layout: default
+title: Travlr
+---
+
 # Database Enhancement
 
 ## Overview
@@ -12,7 +17,7 @@ Some particularly notable components of this enhancement are my use of Goose mig
 
 The original implementation used MongoDB as its database layer and Express as its backend framework. While the application was functional, it relied on a document-oriented database and Javascript-based backend architecture. As part of this enhancement, I redesigned the data layer to use PostgreSQL while preserving compatibility with the existing Angular front end. The schema is defined in the following image.
 
-![schema diagram](../../assets/images/TravlrDatabaseSchema.png)
+![schema diagram](/assets/images/TravlrDatabaseSchema.png)
 
 A major goal of this enhancement was demonstrating that the data layer and application layer could be replaced independently as long as the API contract remained consistent.
 
@@ -22,7 +27,7 @@ Migrating from MongoDB to PostgreSQL required redesigning the application’s da
 
 To support this migration, I used Goose migrations to create and manage the database schema through version-controlled SQL artifacts. This approach preserves a clear history of schema evolution while also making deployment and database initialization repeatable on new systems.
 
-```
+```sql
 -- +goose Up
 CREATE TABLE trips (
 	code TEXT PRIMARY KEY NOT NULL,
@@ -58,6 +63,10 @@ One of the most interesting challenges involved RSA-based JWT signing. Because R
 My solution was to create a helper function that checks for the presence of a keypair when the server starts. If no keypair is found, the application automatically generates and stores one. This preserves security while also providing a much smoother deployment experience.
 
 Another lesson came from the migration process itself. Major architectural changes often force developers to examine assumptions that have existed within a system for a long time. Because migrating from MongoDB to PostgreSQL required me to analyze the application’s data structures in detail, I was able to discover the date-handling bug in the Edit Trip page that had previously gone unnoticed. The migration itself became an opportunity to improve application quality beyond the database layer.
+
+## Course Outcomes Addressed
+
+This enhancement covered <span tabindex="0" class="tooltip">outcome 2<span class="tooltip-text">Design and deliver professional-quality verbal communications.</span></span> in this enhancement through the development of an ERD to describe the database and the development of the database [enhancement breakdown](https://roxensox.github.io/travlr/artifacts/database). I also accomplished <span tabindex="0" class="tooltip">outcome 3<span class="tooltip-text">Design and evaluate computing solutions that solve a given problem using algorithmic principles.</span></span> with this enhancement by working through the tradeoffs that come with migrating from a flexible NoSQL database to a structured database like PostgreSQL. Finally, I accomplished <span tabindex="0" class="tooltip">outcome 4<span class="tooltip-text">Use well-founded and innovative techniques, skills and tools to implement solutions.</span></span> with this enhancement by using Goose and SQLC to implement database migrations and code generation from SQLC -- two industry-standard tools.
 
 ## Reflection
 

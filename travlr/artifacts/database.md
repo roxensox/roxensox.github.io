@@ -1,3 +1,8 @@
+---
+layout: default
+title: Travlr
+---
+
 # Databases Enhancement - MongoDB to PostgreSQL
 
 ## Source Code
@@ -6,15 +11,15 @@ The SQL schema and queries can be found in [`/go_server/sql`](https://github.com
 
 ## Schema
 
-To complete this enhancement, I had to create a relational database schema that stored data in a format compatible with the existing Angular front end, while also complying with Go's strong typing. Because number fields are handled as text in many cases in the original implementation, I decided to store them as text in the PostgreSQL implementation and validate that the stored data is numeric before writing to the database. See the schema below for reference.
+To complete this enhancement, I had to create a relational database schema that stored data in a format compatible with the existing Angular front end, while also complying with Go's strong typing. Because number fields are handled as text in many cases in the original implementation, I had to convert the received numeric strings to integers in the PostgreSQL implementation by validating that the received strings are numeric before attempting to store them. See the schema below for reference.
 
-![travlr database schema](../../assets/images/TravlrDatabaseSchema.png)
+![travlr database schema](/assets/images/TravlrDatabaseSchema.png)
 
 ## Data Validation
 
-To validate requests from the frontend for database writes, I created a helper function in the Go code that prepares the received data for backend use. Specifically, it converts the received string value for the trip start date to a timestamp and ensures that the `perPerson` string value is numeric to avoid unintended front end behavior. See the snippet below for the validation function.
+To validate requests from the frontend for database writes, I created a helper function in the Go code that prepares the received data for backend use. Specifically, it converts the received string value for the trip start date to a timestamp and ensures that the received `perPerson` string value is numeric in order to store it in the database. See the snippet below for the validation function.
 
-```
+```go
 // ValidateTripRequest converts the Angular request DTO into a frontend-ready
 // response DTO and a parsed date value for database writes.
 func ValidateTripRequest(trip RequestTrip) (ResponseTrip, time.Time, error) {
@@ -64,4 +69,4 @@ This enhancement improved the artifact by:
 - Allowing extensible database functionality
 - Improving data shape consistency
 - Separating the database from other backend concerns
-- Supporting better data balidation
+- Supporting better data validation

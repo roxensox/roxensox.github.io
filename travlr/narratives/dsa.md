@@ -1,3 +1,8 @@
+---
+layout: default
+title: Travlr
+---
+
 # Security Enhancement
 
 ## Overview
@@ -14,7 +19,7 @@ The original implementation relied on the authentication architecture provided b
 
 The most significant enhancement was the adoption of Argon2id for password hashing. Argon2id is a modern password hashing algorithm specifically designed to resist brute-force attacks and hardware-assisted cracking attempts. One advantage of this approach is that the generated hash contains the salt information, making it unnecessary to store a separate salt value within the database. This simplified the database design while also improving security.
 
-```
+```go
 func HashPassword(password string) (hash string, err error) {
 	saltBytes := make([]byte, 16)
 	if _, err := rand.Read(saltBytes); err != nil {
@@ -34,7 +39,7 @@ func HashPassword(password string) (hash string, err error) {
 
 Another improvement was the use of Go’s ConstantTimeCompare function during password verification. Traditional string comparisons may reveal information through execution timing differences, potentially allowing attackers to infer details about stored credentials. Using constant-time comparison removes this attack vector by making sure that comparisons take the same amount of time regardless of how much of the input matches.
 
-```
+```go
 func VerifyPassword(password, hash string) (bool, error) {
 	parts := strings.Split(hash, "$")
 	if len(parts) != 6 || parts[1] != "argon2id" {
@@ -63,7 +68,7 @@ In addition to password security, the authentication system was expanded to supp
 
 To support token revocation and expiration, JWTs are stored in the database as hashed values alongside their associated metadata.
 
-```
+```go
 tokenHash := auth.HashToken(token)
 
 tokenGenParams := database.CreateJWTParams{
@@ -92,7 +97,7 @@ I began building a test suite around these functions and used the experience as 
 
 One of the functions that I ended up testing the most in-depth was the ValidateToken function. This function is crucial to the security of the authentication flow and provided a good opportunity to build a comprehensive test matrix covering both valid and invalid authentication scenarios.
 
-```
+```go
 func TestValidateToken(t *testing.T) {
 	privateKey, err := rsa.GenerateKey(rand.Reader, 2048)
 	if err != nil {
@@ -124,7 +129,7 @@ func TestValidateToken(t *testing.T) {
 ```
 
 
-```
+```go
 tests := []struct {
 	name      string
 	token     string
@@ -157,6 +162,10 @@ tests := []struct {
 	},
 }
 ```
+
+## Course Outcomes Addressed
+
+With this enhancement, I set out to achieve <span tabindex="0" class="tooltip">outcome 3<span class="tooltip-text">Design and evaluate computing solutions that solve a given problem using algorithmic principles.</span></span> and <span tabindex="0" class="tooltip">outcome 4<span class="tooltip-text">Use well-founded and innovative techniques, skills and tools to implement solutions.</span></span>. The final enhancement demonstrates that I have accomplished <span tabindex="0" class="tooltip">outcome 3<span class="tooltip-text">Design and evaluate computing solutions that solve a given problem using algorithmic principles.</span></span> by comparing two security features of the original implementation with other security options, assessing the tradeoffs, and implementing the new feature, handling all logistical issues in the process. The enhancement also demonstrates that I have accomplished <span tabindex="0" class="tooltip">outcome 5<span class="tooltip-text">Develop a security mindset and design against adversarial behavior.</span></span> by focusing squarely on security features and improving the authentication and session workflows to promote stronger security.
 
 ## Reflection
 

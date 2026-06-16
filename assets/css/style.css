@@ -127,3 +127,53 @@ pre code {
 .nav-dropdown__menu a:focus {
 	background: #f1f5f9;
 }
+
+/* Tooltip formatting */
+.tooltip {
+	position: relative;
+	cursor: help;
+	border-bottom: 1px dotted currentColor;
+}
+
+.tooltip-text {
+	visibility: hidden;
+	opacity: 0;
+	position: absolute;
+	left: 0;
+	bottom: 125%;
+	z-index: 20;
+
+	width: max-content;
+	max-width: 20rem;
+	padding: 0.6rem 0.75rem;
+	border: 1px solid #d9e2ec;
+	border-radius: 6px;
+
+	background: #ffffff;
+	color: #1f2933;
+	box-shadow: 0 8px 24px rgba(15, 23, 42, 0.15);
+
+	transition: opacity 0.15s ease;
+}
+
+.tooltip:hover .tooltip-text,
+.tooltip:focus .tooltip-text,
+.tooltip:focus-within .tooltip-text {
+	visibility: visible;
+	opacity: 1;
+}
+
+/* Video player formatting */
+.video-embed {
+	position: relative;
+	width: 100%;
+	aspect-ratio: 16 / 9;
+	margin: 1.5rem 0;
+}
+
+.video-embed iframe {
+	width: 100%;
+	height: 100%;
+	border: 0;
+	border-radius: 6px;
+}

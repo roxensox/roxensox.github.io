@@ -1,3 +1,8 @@
+---
+layout: default
+title: Travlr
+---
+
 # Algorithms and Data Structures Enhancement - Authentication Workflow
 
 ## Source Code
@@ -6,9 +11,9 @@ Enhanced authentication code can be found in [`/go_server/internal/auth/password
 
 ## Password Hashing
 
-In this enhancement, I used the Argon2id password hashing algorithm to hash passwords for secure storage in the database. In the original implementation, passwords were hashed using SHA512, which is substantially less secure than Argon2id, but much simpler to implement. See the snippet below for the password hashing technique used in the Express implementation.
+In this enhancement, I used the Argon2id password hashing algorithm to hash passwords for secure storage in the database. In the original implementation, passwords were hashed using PBKDF2-HMAC-SHA512, which is substantially less resistent to modern password-cracking attacks than properly implemented Argon2id hashing, but much simpler to implement. See the snippet below for the password hashing technique used in the Express implementation.
 
-```
+```javascript
 userSchema.methods.setPassword = function (password) {
 	this.salt = crypto.randomBytes(16).toString('hex');
 	this.hash = crypto.pbkdf2Sync(password, this.salt, 1000, 64, 'sha512').toString('hex');
@@ -22,7 +27,7 @@ userSchema.methods.validPassword = function(password) {
 
 While this implementation was good for a test environment, the Argon2id is much stronger specifically for hashing passwords. Argon2id hashing is much more complicated to implement because it involves substantially more variables, but hashes are returned as strings which contain all the data necessary to validate passwords later, allowing the `VerifyPassword` function to stay relatively simple. See the snippet below for the enhanced password hashing flow.
 
-```
+```go
 // HashPassword derives an encoded Argon2id password hash suitable for storage
 // in the users table. The encoded value includes the salt and work factors
 // needed to verify the password later.
@@ -75,7 +80,7 @@ Notably, the Go implementation prevents attackers from inferring the hash throug
 
 Another change with this enhancement was the introduction of stateful JWTs. In the original implementation, JWTs were issued to authenticated users with a 1-hour expiration, but there was no record of JWTs in the database, so token management was much less robust. See the JWT flow in the snippets below.
 
-```
+```javascript
 userSchema.methods.generateJWT = function() {
 	return jwt.sign(
 	{ // Payload for our JSON Web Token
@@ -88,7 +93,7 @@ userSchema.methods.generateJWT = function() {
 };
 ```
 
-```
+```javascript
 const verified = jwt.verify(token, process.env.JWT_SECRET, (err, verified) => {
 	if (err) {
 		// console.log("Invalid token");
@@ -100,7 +105,7 @@ const verified = jwt.verify(token, process.env.JWT_SECRET, (err, verified) => {
 
 In the Go backend, JWTs are generated, hashed, and stored in the database with an expiration time, revocation status, and associated user ID. This change enables stronger token control than the previous implementation by allowing tokens to be revoked before the time limit and allowing rejection of tokens presented by users not associated with the token. See the enhanced JWT flow in the snippet below.
 
-```
+```go
 // GenerateToken creates an RSA-signed JWT for the authenticated user.
 func GenerateToken(userID uuid.UUID, privateKey *rsa.PrivateKey, expiresIn time.Duration) (string, error) {
 	if privateKey == nil {

@@ -1,5 +1,7 @@
-# Ryan Hoveskeland
-// roxensox.github.io
+---
+layout: default
+title: Travlr
+---
 
 ## Overview
 
@@ -21,7 +23,15 @@ Travlr Getaways is a full-stack project completed using the MEAN stack for my fu
 
 ## Live Demo
 
-[Link to the deployed website](https://hoveskeland-travlr.vercel.app)
+After completing my enhancements, I decided to use Vercel and Render to deploy the frontend and backend, respectively, for a live demo. The live demo has a working authentication workflow, allowing users to add and edit trips when authenticated. [Follow this link to visit the deployed website](https://hoveskeland-travlr.vercel.app), and use the credentials below to authenticate and edit the site:
+
+```text
+Name: Ryan
+Email: ryan@example.com
+Password: testpass123
+```
+
+Note that the name field is required, but can be set to any value you choose.
 
 ## Capstone Enhancements
 
@@ -35,6 +45,13 @@ Travlr Getaways is a full-stack project completed using the MEAN stack for my fu
 
 ## Capstone Code Review
 
-[![Code Review](https://img.youtube.com/vi/Ykzun9Gxig0/hqdefault.jpg)](https://youtu.be/Ykzun9Gxig0)
+<div class="video-embed">
+  <iframe
+    src="https://www.youtube.com/embed/Ykzun9Gxig0"
+    title="Capstone Code Review"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen>
+  </iframe>
+</div>
 
 This code review examines the original Travlr Getaways application before enhancement. The review discusses the existing functionality, analyzes architectural strengths and weaknesses, identifies opportunities for improvement, and outlines the software engineering, database, and algorithms/data structures enhancements implemented during the capstone project.

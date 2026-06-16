@@ -1,3 +1,8 @@
+---
+layout: default
+title: Travlr
+---
+
 # Software Engineering Enhancement
 
 ## Overview
@@ -26,7 +31,7 @@ One of the most interesting lessons from this enhancement involved the tradeoffs
 
 In the end, my solution to preserve compatibility was to create a custom type capable of accepting either strings or integers during JSON unmarshaling, and use that to hold `perPerson` values.
 
-```
+```go
 type IntString string
 
 func (f *IntString) UnmarshalJSON(data []byte) error {
@@ -48,7 +53,7 @@ func (f *IntString) UnmarshalJSON(data []byte) error {
 
 Once I decided to address the type mismatch directly, I also added validation at the API level to ensure incoming requests contained valid data before entering the rest of the application, and to reshape them for use if so. This included validating date formats and ensuring that numeric values were within acceptable ranges.
 
-```
+```go
 func ValidateTripRequest(trip RequestTrip) (ResponseTrip, time.Time, error) {
 	validStart, err := DateFromString(trip.Start)
 	if err != nil {
@@ -74,7 +79,7 @@ I see this as a decision about when to deal with complexity in a system. Weakly 
 
 One challenge throughout this enhancement was maintaining compatibility with the existing Angular application while replacing the entire back-end implementation. Because the front end was designed to communicate with an Express server, I needed to carefully compare responses between the two implementations and ensure that the Go API produced data in the format Angular expected. To accomplish this, I created a response transformation layer that converted internal data structures into the exact shape expected by the Angular client.
 
-```
+```go
 trips_array := []ResponseTrip{
 	{
 		Code:        trip.Code,
@@ -90,6 +95,10 @@ trips_array := []ResponseTrip{
 ```
 
 This required extensive testing using the web browser, Postman, logging output, and git branches to isolate and troubleshoot issues. Working with an existing codebase and replicating its functionality proved to be a very different experience from developing a project entirely from scratch.
+
+## Course Outcomes Addressed
+
+With this enhancement, I had planned to satisfy <span tabindex="0" class="tooltip">outcome 1<span class="tooltip-text">Collaborative environments and communication.</span></span>, <span tabindex="0" class="tooltip">outcome 3<span class="tooltip-text">Design and evaluate computing solutions that solve a given problem using algorithmic principles.</span></span>, and <span tabindex="0" class="tooltip">outcome 4<span class="tooltip-text">Use well-founded and innovative techniques, skills and tools to implement solutions.</span></span>. This enhancement satisfies <span tabindex="0" class="tooltip">outcome 1<span class="tooltip-text">Collaborative environments and communication.</span></span> by the extensive use of Git feature branches and version control to separate features-in-work from the main branch, maintaining the working state of the project while the new version is under construction and allowing other developers to see the current state of the project and join in development if they would like to. This enhancement also satisfies <span tabindex="0" class="tooltip">outcome 3<span class="tooltip-text">Design and evaluate computing solutions that solve a given problem using algorithmic principles.</span></span> through the overall migration from JavaScript to Go, which required weighing the pros and cons of breaking the MEAN ecosystem and handling compatibility issues during development. Finally, this enhancement satisfies <span tabindex="0" class="tooltip">outcome 4<span class="tooltip-text">Use well-founded and innovative techniques, skills and tools to implement solutions.</span></span> through the use of Goose, SQLC, Go standard library packages like `net/http`; all technologies commonly used in professional Go development.
 
 ## Reflection
 
