@@ -4,7 +4,7 @@ title: DSA
 permalink: /travlr/narratives/dsa/
 ---
 
-# Security Enhancement
+# Algorithms and Data Structures Enhancement
 
 ## Overview
 
