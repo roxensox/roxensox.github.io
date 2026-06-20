@@ -7,6 +7,18 @@ permalink: /travlr/artifacts/endpoints/
 # Software Engineering Enhancement 
 # REST API Endpoints
 
+## Source Code
+
+### Original
+Original code files can be found at the following links:
+- [`index.js`]({{ '/travlr/project_code/Original_Baseline/app_api/routes/index.js' | relative_url }})
+- [`trips.js`]({{ '/travlr/project_code/Original_Baseline/app_api/controllers/trips.js' | relative_url }})
+
+### Enhanced
+Enhanced code files can be found at the following links:
+- [`/go_server/main.go`](https://github.com/roxensox/portfolio-travlr/blob/main/go_server/main.go)
+- [`/go_server/internal/api/trips.go`](https://github.com/roxensox/portfolio-travlr/blob/main/go_server/internal/api/trips.go)
+
 ## Routes
 
 Endpoint routes are defined in [`/go_server/main.go`](https://github.com/roxensox/portfolio-travlr/blob/main/go_server/main.go), and fully replicate the set of endpoints and methods in the original MEAN implementation.

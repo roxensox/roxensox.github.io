@@ -8,8 +8,17 @@ permalink: /travlr/artifacts/authentication/
 # Authentication Workflow
 
 ## Source Code
+### Original
+Original authentication code can be found at the following link:
+- [`authentication.js`]({{ '/travlr/project_code/Original_Baseline/app_api/controllers/authentication.js' | relative_url }})
+- [`user.js`]({{ '/travlr/project_code/Original_Baseline/app_api/models/user.js' | relative_url }})
 
-Enhanced authentication code can be found in [`/go_server/internal/auth/password.go`](https://github.com/roxensox/portfolio-travlr/blob/main/go_server/internal/auth/password.go), [`/go_server/internal/auth/jwt.go`](https://github.com/roxensox/portfolio-travlr/blob/main/go_server/internal/auth/jwt.go), [`/go_server/internal/api/auth.go`](https://github.com/roxensox/portfolio-travlr/blob/main/go_server/internal/api/auth.go), and [`/go_server/internal/api/auth_middleware.go`](https://github.com/roxensox/portfolio-travlr/blob/main/go_server/internal/api/auth_middleware.go).
+### Enhanced
+Enhanced authentication code can be found at the following links:
+- [`/go_server/internal/auth/password.go`](https://github.com/roxensox/portfolio-travlr/blob/main/go_server/internal/auth/password.go)
+- [`/go_server/internal/auth/jwt.go`](https://github.com/roxensox/portfolio-travlr/blob/main/go_server/internal/auth/jwt.go)
+- [`/go_server/internal/api/auth.go`](https://github.com/roxensox/portfolio-travlr/blob/main/go_server/internal/api/auth.go)
+- [`/go_server/internal/api/auth_middleware.go`](https://github.com/roxensox/portfolio-travlr/blob/main/go_server/internal/api/auth_middleware.go)
 
 ## Password Hashing
 

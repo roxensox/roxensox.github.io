@@ -10,7 +10,7 @@ permalink: /travlr/artifacts/
 
 ### Before:
 
-The original Travlr Getaways implementation was completed as SNHU coursework and is not published publicly to preserve academic integrity and course material privacy. Instead, I've included code snippets in the comparisons and breakdowns to illustrate the biggest differences between the original and enhanced implementations. Original source code is also reviewed in the [code review video linked here.](https://youtu.be/Ykzun9Gxig0)
+The original Travlr Getaways implementation was completed as SNHU coursework and is not published publicly in its entirety in order to preserve academic integrity and course material privacy. Instead, I've included [all particularly relevant code files within this repository, viewable at this link](https://github.com/roxensox/roxensox.github.io/tree/main/travlr/project_code/Original_Baseline). Original source code is also reviewed in the [code review video linked here.](https://youtu.be/Ykzun9Gxig0)
 
 ### After:
 
