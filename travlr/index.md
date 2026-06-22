@@ -8,6 +8,13 @@ permalink: /travlr/
 
 Travlr Getaways is a full-stack project completed using the MEAN stack for my full stack development class at SNHU, CS-465. For my portfolio piece, I've migrated the back end from Express to Go and migrated the database from MongoDB to PostgreSQL. The project demonstrates REST API design, database migration, authentication, testing, and secure software development practices.
 
+## Source Code
+### Original
+[Original, MEAN Stack key files](https://github.com/roxensox/roxensox.github.io/tree/main/travlr/project_code/Original_Baseline)
+
+### Enhanced
+[Enhanced Go Implementation repository](https://github.com/roxensox/portfolio-travlr/)
+
 ## Tech Stack
 
 
@@ -43,6 +50,33 @@ Note that the name field is required, but can be set to any value you choose.
 |Improved project structure and maintainability| Added Goose migrations| Used constant-time password verification|
 | | Designed database access middleware| Improved JWT handling|
 
+
+## Program Outcome Alignment
+
+| Outcome | Evidence of Achievement |
+|-|-|
+|Outcome 1|Code review, technical narratives, stakeholder-focused design documentation|
+|Outcome 2|Professional self-assessment, GitHub Pages portfolio, code review video|
+|Outcome 3|Go backend redesign, PostgreSQL migration, architectural tradeoff analysis|
+|Outcome 4|Angular, Go, PostgreSQL, SQLC, Goose, testing, deployment|
+|Outcome 5|Argon2id, JWT authentication, input validation, constant-time comparison|
+
+### Course Outcome Definitions
+
+1. **Collaborative Environments**  
+   Employ strategies for building collaborative environments that enable diverse audiences to support organizational decision-making in the field of computer science.
+
+2. **Professional Communication**  
+   Design, develop, and deliver professional-quality oral, written, and visual communications that are coherent, technically sound, and appropriately adapted to specific audiences and contexts.
+
+3. **Computing Solutions and Design Trade-offs**  
+   Design and evaluate computing solutions that solve a given problem using algorithmic principles and computer science practices and standards appropriate to its solution while managing the trade-offs involved in design choices.
+
+4. **Techniques, Skills, and Tools**  
+   Demonstrate an ability to use well-founded and innovative techniques, skills, and tools in computing practices for the purpose of implementing computer solutions that deliver value and accomplish industry-specific goals.
+
+5. **Security Mindset**  
+   Develop a security mindset that anticipates adversarial exploits in software architecture and designs to expose potential vulnerabilities, mitigate design flaws, and ensure privacy and enhanced security of data and resources.
 
 ## Capstone Code Review
 

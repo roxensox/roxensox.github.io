@@ -10,8 +10,8 @@ permalink: /travlr/artifacts/authentication/
 ## Source Code
 ### Original
 Original authentication code can be found at the following link:
-- [`authentication.js`]({{ '/travlr/project_code/Original_Baseline/app_api/controllers/authentication.js' | relative_url }})
-- [`user.js`]({{ '/travlr/project_code/Original_Baseline/app_api/models/user.js' | relative_url }})
+- [`app_api/controllers/authentication.js`](https://github.com/roxensox/roxensox.github.io/blob/main/travlr/project_code/Original_Baseline/app_api/controllers/authentication.js)
+- [`app_api/models/user.js`](https://github.com/roxensox/roxensox.github.io/blob/main/travlr/project_code/Original_Baseline/app_api/models/user.js)
 
 ### Enhanced
 Enhanced authentication code can be found at the following links:

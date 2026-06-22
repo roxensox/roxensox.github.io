@@ -11,8 +11,8 @@ permalink: /travlr/artifacts/endpoints/
 
 ### Original
 Original code files can be found at the following links:
-- [`index.js`]({{ '/travlr/project_code/Original_Baseline/app_api/routes/index.js' | relative_url }})
-- [`trips.js`]({{ '/travlr/project_code/Original_Baseline/app_api/controllers/trips.js' | relative_url }})
+- [`app_api/routes/index.js`](https://github.com/roxensox/roxensox.github.io/blob/main/travlr/project_code/Original_Baseline/app_api/routes/index.js)
+- [`app_api/controllers/trips.js`](https://github.com/roxensox/roxensox.github.io/blob/main/travlr/project_code/Original_Baseline/app_api/controllers/trips.js)
 
 ### Enhanced
 Enhanced code files can be found at the following links:
