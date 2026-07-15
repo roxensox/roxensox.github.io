@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Artifacts
-permalink: /travlr/artifacts/
+permalink: /academic-projects/travlr/artifacts/
 ---
 
 # Travlr Getaways - Artifacts
@@ -10,7 +10,7 @@ permalink: /travlr/artifacts/
 
 ### Before:
 
-The original Travlr Getaways implementation was completed as SNHU coursework and is not published publicly in its entirety in order to preserve academic integrity and course material privacy. Instead, I've included [all particularly relevant code files within this repository, viewable at this link](https://github.com/roxensox/roxensox.github.io/tree/main/travlr/project_code/Original_Baseline). Original source code is also reviewed in the [code review video linked here.](https://youtu.be/Ykzun9Gxig0)
+The original Travlr Getaways implementation was completed as SNHU coursework and is not published publicly in its entirety in order to preserve academic integrity and course material privacy. Instead, I've included [all particularly relevant code files within this repository, viewable at this link](https://github.com/roxensox/roxensox.github.io/tree/main/academic-projects/travlr/project_code/Original_Baseline). Original source code is also reviewed in the [code review video linked here.](https://youtu.be/Ykzun9Gxig0)
 
 ### After:
 
@@ -34,6 +34,6 @@ In the spirit of creating a 1:1 replication of the original Travlr Getaways appl
 
 To view comparisons and breakdowns of the enhancements, click the following links:
 
-- [Software engineering enhancement]({{ '/travlr/artifacts/endpoints' | relative_url }})
-- [Database enhancement]({{ '/travlr/artifacts/database' | relative_url }})
-- [Data Structures and Algorithms enhancement]({{ '/travlr/artifacts/authentication' | relative_url }})
+- [Software engineering enhancement]({{ '/academic-projects/travlr/artifacts/endpoints' | relative_url }})
+- [Database enhancement]({{ '/academic-projects/travlr/artifacts/database' | relative_url }})
+- [Data Structures and Algorithms enhancement]({{ '/academic-projects/travlr/artifacts/authentication' | relative_url }})

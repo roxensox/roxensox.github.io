@@ -1,7 +1,7 @@
 ---
 layout: default
 title: DSA
-permalink: /travlr/narratives/dsa/
+permalink: /academic-projects/travlr/narratives/dsa/
 ---
 
 # Algorithms and Data Structures Enhancement

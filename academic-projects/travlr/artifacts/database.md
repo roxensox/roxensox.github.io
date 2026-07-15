@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Database
-permalink: /travlr/artifacts/database/
+permalink: /academic-projects/travlr/artifacts/database/
 ---
 
 # Databases Enhancement 

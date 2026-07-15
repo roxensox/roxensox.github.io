@@ -1,16 +1,16 @@
 ---
 layout: default
 title: Travlr
-permalink: /travlr/
+permalink: /academic-projects/travlr/
 ---
 
 ## Overview
 
-Travlr Getaways is a full-stack project completed using the MEAN stack for my full stack development class at SNHU, CS-465. For my portfolio piece, I've migrated the back end from Express to Go and migrated the database from MongoDB to PostgreSQL. The project demonstrates REST API design, database migration, authentication, testing, and secure software development practices.
+Travlr Getaways is a full-stack project completed using the MEAN stack for my full stack development class at SNHU, CS-465. For my portfolio piece, I've migrated the back end from Express to Go and migrated the database from MongoDB to PostgreSQL. The project demonstrates REST API design, database migration, authentication, testing, and secure software development practices. Although implemented in Go, this project demonstrates backend service design patterns transferrable to Java/Spring Boot: routing, middleware, DTO validation, persistence layers, and automated testing.
 
 ## Source Code
 ### Original
-[Original, MEAN Stack key files](https://github.com/roxensox/roxensox.github.io/tree/main/travlr/project_code/Original_Baseline)
+[Original, MEAN Stack key files](https://github.com/roxensox/roxensox.github.io/tree/main/academic-projects/travlr/project_code/Original_Baseline)
 
 ### Enhanced
 [Enhanced Go Implementation repository](https://github.com/roxensox/portfolio-travlr/)

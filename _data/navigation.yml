@@ -1,0 +1,55 @@
+- title: Home
+  url: /
+
+- title: Academic Projects
+  url: /academic-projects/
+  children:
+    - title: Overview
+      url: /academic-projects/
+    - title: Travlr
+      url: /academic-projects/travlr/
+      children:
+        - title: Narratives
+          children:
+            - title: Databases
+              url: /academic-projects/travlr/narratives/databases/
+            - title: Algorithms and Data Structures
+              url: /academic-projects/travlr/narratives/dsa/
+            - title: Software Engineering
+              url: /academic-projects/travlr/narratives/software-engineering/
+        - title: Artifacts
+          children:
+            - title: Overview
+              url: /academic-projects/travlr/artifacts/
+            - title: REST API
+              url: /academic-projects/travlr/artifacts/endpoints/
+            - title: Database
+              url: /academic-projects/travlr/artifacts/database/
+            - title: Authentication
+              url: /academic-projects/travlr/artifacts/authentication/
+        - title: Source Code
+          children:
+            - title: Original
+              url: https://github.com/roxensox/roxensox.github.io/tree/main/academic-projects/travlr/project_code/Original_Baseline
+              external: true
+            - title: Enhanced
+              url: https://github.com/roxensox/portfolio-travlr
+              external: true
+
+- title: Personal Projects
+  url: /personal-projects/
+  children:
+    - title: Overview
+      url: /personal-projects/
+    - title: WeatherWatcher TUI
+      url: /personal-projects/weather-watcher/
+      children:
+        - title: Source Code
+          url: https://github.com/roxensox/WeatherWatcherTUI
+          external: true
+
+- title: Boot.dev Projects
+  url: /bootdev-projects/
+  children:
+    - title: Overview
+      url: /bootdev-projects/

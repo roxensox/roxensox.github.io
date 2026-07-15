@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Authentication
-permalink: /travlr/artifacts/authentication/
+permalink: /academic-projects/travlr/artifacts/authentication/
 ---
 
 # Algorithms and Data Structures Enhancement
@@ -10,8 +10,8 @@ permalink: /travlr/artifacts/authentication/
 ## Source Code
 ### Original
 Original authentication code can be found at the following link:
-- [`app_api/controllers/authentication.js`](https://github.com/roxensox/roxensox.github.io/blob/main/travlr/project_code/Original_Baseline/app_api/controllers/authentication.js)
-- [`app_api/models/user.js`](https://github.com/roxensox/roxensox.github.io/blob/main/travlr/project_code/Original_Baseline/app_api/models/user.js)
+- [`app_api/controllers/authentication.js`](https://github.com/roxensox/roxensox.github.io/blob/main/academic-projects/travlr/project_code/Original_Baseline/app_api/controllers/authentication.js)
+- [`app_api/models/user.js`](https://github.com/roxensox/roxensox.github.io/blob/main/academic-projects/travlr/project_code/Original_Baseline/app_api/models/user.js)
 
 ### Enhanced
 Enhanced authentication code can be found at the following links:

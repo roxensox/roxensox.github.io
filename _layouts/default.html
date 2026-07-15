@@ -8,41 +8,105 @@
 	<link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 </head>
 
-<body>
+{% assign path_parts = page.url | remove_first: '/' | split: '/' %}
+{% assign section_slug = path_parts[0] | default: 'home' %}
+{% assign subsection_slug = path_parts[1] %}
+{% assign current_url = page.url %}
+<body class="theme-{{ section_slug }}{% if subsection_slug != nil and subsection_slug != '' %} theme-{{ section_slug }}-{{ subsection_slug }}{% endif %}">
 	<header>
 		<h1>{{ site.title }}</h1>
 		<nav class="site-nav">
-			<a href="{{ '/' | relative_url }}">Home</a>
-			<a href="{{ '/travlr/' | relative_url }}">Travlr</a>
-			<details class="nav-dropdown">
-				<summary>Narratives</summary>
-				<div class="nav-dropdown__menu">
-					<a href="{{ '/travlr/narratives/databases' | relative_url }}">Databases</a>
-					<a href="{{ '/travlr/narratives/dsa' | relative_url }}">Algorithms and Data
-						Structures</a>
-					<a href="{{ '/travlr/narratives/software-engineering' | relative_url }}">Software
-						Engineering</a>
-				</div>
-			</details>
-			<details class="nav-dropdown">
-				<summary>Artifacts</summary>
-				<div class="nav-dropdown__menu">
-					<a href="{{ '/travlr/artifacts/' | relative_url }}">Overview</a>
-					<a href="{{ '/travlr/artifacts/endpoints' | relative_url }}">REST API</a>
-					<a href="{{ '/travlr/artifacts/database' | relative_url }}">Database</a>
-					<a
-						href="{{ '/travlr/artifacts/authentication' | relative_url }}">Authentication</a>
-				</div>
-			</details>
-			<details class="nav-dropdown">
-				<summary>Source Code</summary>
-				<div class="nav-dropdown__menu">
-					<a
-						href="https://github.com/roxensox/roxensox.github.io/tree/main/travlr/project_code/Original_Baseline">Original</a>
-					<a href="https://github.com/roxensox/portfolio-travlr">Enhanced</a>
-				</div>
-			</details>
-			<a href="{{ '/info/' | relative_url }}">Info</a>
+			{% for item in site.data.navigation %}
+			{% assign should_show = true %}
+			{% if item.show_on %}
+				{% assign should_show = false %}
+				{% if current_url contains item.show_on %}
+					{% assign should_show = true %}
+				{% endif %}
+			{% endif %}
+			{% if should_show %}
+				{% assign is_active_section = false %}
+				{% if item.url %}
+					{% if current_url contains item.url %}
+						{% assign is_active_section = true %}
+					{% endif %}
+				{% endif %}
+				{% if item.show_on %}
+					{% assign is_active_section = true %}
+				{% endif %}
+				{% if item.children %}
+				{% if is_active_section %}
+				{% assign visible_child_count = 0 %}
+				{% for child in item.children %}
+					{% unless child.url == current_url %}
+						{% assign visible_child_count = visible_child_count | plus: 1 %}
+					{% endunless %}
+				{% endfor %}
+				{% if visible_child_count > 0 %}
+				<details class="nav-dropdown">
+					<summary>{{ item.title }}</summary>
+					<div class="nav-dropdown__menu">
+						{% for child in item.children %}
+							{% if child.children %}
+							<details class="nav-dropdown__nested">
+								<summary>{{ child.title }}</summary>
+								<div class="nav-dropdown__submenu">
+									{% if child.url %}
+									{% unless child.url == current_url %}
+									<a href="{{ child.url | relative_url }}">Overview</a>
+									{% endunless %}
+									{% endif %}
+									{% for grandchild in child.children %}
+										{% unless grandchild.url == current_url %}
+										{% if grandchild.children %}
+										<details class="nav-dropdown__nested">
+											<summary>{{ grandchild.title }}</summary>
+											<div class="nav-dropdown__submenu">
+												{% for item_child in grandchild.children %}
+													{% unless item_child.url == current_url %}
+													{% if item_child.external %}
+													<a href="{{ item_child.url }}">{{ item_child.title }}</a>
+													{% else %}
+													<a href="{{ item_child.url | relative_url }}">{{ item_child.title }}</a>
+													{% endif %}
+													{% endunless %}
+												{% endfor %}
+											</div>
+										</details>
+										{% elsif grandchild.external %}
+										<a href="{{ grandchild.url }}">{{ grandchild.title }}</a>
+										{% else %}
+										<a href="{{ grandchild.url | relative_url }}">{{ grandchild.title }}</a>
+										{% endif %}
+										{% endunless %}
+									{% endfor %}
+								</div>
+							</details>
+							{% elsif child.external %}
+							{% unless child.url == current_url %}
+							<a href="{{ child.url }}">{{ child.title }}</a>
+							{% endunless %}
+							{% else %}
+							{% unless child.url == current_url %}
+							<a href="{{ child.url | relative_url }}">{{ child.title }}</a>
+							{% endunless %}
+							{% endif %}
+						{% endfor %}
+					</div>
+				</details>
+				{% endif %}
+				{% else %}
+				{% unless item.url == current_url %}
+				<a href="{{ item.url | relative_url }}">{{ item.title }}</a>
+				{% endunless %}
+				{% endif %}
+				{% elsif item.url %}
+				{% unless item.url == current_url %}
+				<a href="{{ item.url | relative_url }}">{{ item.title }}</a>
+				{% endunless %}
+				{% endif %}
+			{% endif %}
+			{% endfor %}
 		</nav>
 	</header>
 	<main>

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Databases
-permalink: /travlr/narratives/databases/
+permalink: /academic-projects/travlr/narratives/databases/
 ---
 
 # Database Enhancement
@@ -67,7 +67,7 @@ Another lesson came from the migration process itself. Major architectural chang
 
 ## Course Outcomes Addressed
 
-This enhancement covered <span tabindex="0" class="tooltip">outcome 2<span class="tooltip-text">Design and deliver professional-quality verbal communications.</span></span> in this enhancement through the development of an ERD to describe the database and the development of the database [enhancement breakdown]({{ '/travlr/artifacts/database' | relative_url }}). I also accomplished <span tabindex="0" class="tooltip">outcome 3<span class="tooltip-text">Design and evaluate computing solutions that solve a given problem using algorithmic principles.</span></span> with this enhancement by working through the tradeoffs that come with migrating from a flexible NoSQL database to a structured database like PostgreSQL. Finally, I accomplished <span tabindex="0" class="tooltip">outcome 4<span class="tooltip-text">Use well-founded and innovative techniques, skills and tools to implement solutions.</span></span> with this enhancement by using Goose and SQLC to implement database migrations and code generation from SQLC -- two industry-standard tools.
+This enhancement covered <span tabindex="0" class="tooltip">outcome 2<span class="tooltip-text">Design and deliver professional-quality verbal communications.</span></span> in this enhancement through the development of an ERD to describe the database and the development of the database [enhancement breakdown]({{ '/academic-projects/travlr/artifacts/database' | relative_url }}). I also accomplished <span tabindex="0" class="tooltip">outcome 3<span class="tooltip-text">Design and evaluate computing solutions that solve a given problem using algorithmic principles.</span></span> with this enhancement by working through the tradeoffs that come with migrating from a flexible NoSQL database to a structured database like PostgreSQL. Finally, I accomplished <span tabindex="0" class="tooltip">outcome 4<span class="tooltip-text">Use well-founded and innovative techniques, skills and tools to implement solutions.</span></span> with this enhancement by using Goose and SQLC to implement database migrations and code generation from SQLC -- two industry-standard tools.
 
 ## Reflection
 

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: API
-permalink: /travlr/artifacts/endpoints/
+permalink: /academic-projects/travlr/artifacts/endpoints/
 ---
 
 # Software Engineering Enhancement 
@@ -11,8 +11,8 @@ permalink: /travlr/artifacts/endpoints/
 
 ### Original
 Original code files can be found at the following links:
-- [`app_api/routes/index.js`](https://github.com/roxensox/roxensox.github.io/blob/main/travlr/project_code/Original_Baseline/app_api/routes/index.js)
-- [`app_api/controllers/trips.js`](https://github.com/roxensox/roxensox.github.io/blob/main/travlr/project_code/Original_Baseline/app_api/controllers/trips.js)
+- [`app_api/routes/index.js`](https://github.com/roxensox/roxensox.github.io/blob/main/academic-projects/travlr/project_code/Original_Baseline/app_api/routes/index.js)
+- [`app_api/controllers/trips.js`](https://github.com/roxensox/roxensox.github.io/blob/main/academic-projects/travlr/project_code/Original_Baseline/app_api/controllers/trips.js)
 
 ### Enhanced
 Enhanced code files can be found at the following links:

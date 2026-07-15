@@ -3,38 +3,54 @@ layout: default
 title: Home
 permalink: /
 ---
-## Professional Self-Assessment
 
-I've learned a lot and built a skillset that's both broad and deep throughout my time in Southern New Hampshire University's Computer Science program. I've gained technical skills that allow me to work comfortably in new environments, identify project constraints and how to work around them, and how to contribute meaningfully to existing codebases by developing robust and secure features. My coursework included subjects like database design, cybersecurity, full-stack development, data structures and algorithms, and software test implementation. The projects included in this ePortfolio demonstrate both my technical knowledge acquired during the program as well as my ability to apply that knowledge to real-world software development challenges.
+## Introduction
 
-### Academic and Professional Background
+I am a software developer focused on back-end systems with experience in Python, Go, API design and implementation, security practices, and object-oriented design. My background shows a clear through-line of applying computer science concepts to solve problems in diverse domains, including education and aerospace manufacturing quality. Through my professional experience, I've developed a strong aptitude for communicating with both technical and non-technical stakeholders and translating practical problems into software solutions.
 
-Before studying computer science, I earned a bachelor's degree with a double major in Chinese Language and East Asian Studies, and a minor in business administration. After that, I spent five years abroad, teaching English in Thailand, where I studied programming in my free time. Those experiences developed communication, adaptability, and problem-solving skills, providing me with a strong set of soft skills to complement the technical foundation I've laid out while formally studying Computer Science. My long-term professional goal is to work as a backend software engineer, building reliable, secure, and maintainable systems that support modern applications and systems, and I think that all of my varied experience will make me a top performer in that field.
+Throughout this work, I gained experience with modern testing practices using JUnit, Go's testing framework, Pytest, and Google Test (gtest). I also incorporated static analysis tools such as Cppcheck to identify defects early and reinforce secure coding practices. I also gained direct experience with Java, Gradle, Maven, and Spring Boot through several courses. One class was centered around building a mobile application purely in Java, which required extensive work with modifying the `build.gradle` file for the project; another required implementing security features and performing static analysis on a pre-built Spring Boot application; and a third required fully developing and testing a basic demo program using JUnit testing in Eclipse.
 
-Since returning from teaching English in Thailand, I've worked at Boeing and Collins Aerospace, starting as an assembler at Boeing, transitioning to an inspector position at Collins Aerospace, then working as a quality technician/analyst for Collins Aerospace for a year and a half. In that position, I developed software for the engineering team to solve compliance and data problems in both a factory floor and office environment. In March of 2026, I transitioned back to inspection in order to focus on finishing school.
+In my professional work, I've developed advanced solutions to problems as a teacher in Thailand and as a Quality Tech at Collins Aerospace in Jamestown, ND. As a teacher, I used Python to create a web app with Flask that allows teachers to store grade data and output it to the school's specified format, and at Collins Aerospace I developed numerous software solutions, some of which can be seen in the table below:
 
-### SNHU Takeaways
+| Problem | Solution | Tools | Impacts |
+|-|-|-|-|
+| Document relationships are hard to track for audits | Built a document dependency graph that visualized and propagated non-compliance notifications through parent-child relationships | C#, Windows Forms | Traceability, data integrity, audit support |
+| Products are being shipped with incorrect serial numbers attached, and the operators responsible can't be identified | Integrated with SAP to retrieve expected serial numbers, stored them with SQLite, and built a barcode-scanning application that logged operator changes for traceability | C++, Windows Forms, SQLite | Traceability, data integrity, asset/process tracking |
+| CMM Reports are difficult to look up on the computer, making it very time consuming for inspectors to verify CMM errors | Created a shell script to open a CMM report based on various file identifiers (part number, date, and order number) in the user's text editor of choice | PowerShell, Windows Forms | Data integrity, traceability, process improvement |
+| New inspectors take a long time to learn to write QNs and need reference material to work from | Created a GUI to look up QNs by part number and import the necessary data into a text file for inspectors to reference | Python, TKinter, Win32COM | Data integrity, process improvement |
+| Processing document repository update reports takes several hours a week and requires excessive training for a new worker to take over | Created a Python script that processes report data and stores it in the Excel tracker | Python, Win32COM | Audit support, data integrity, process improvement |
 
-Throughout SNHU's Computer Science program, I gained a lot of experience designing and implementing software solutions at multiple levels of abstraction, and in codebases at various stages of completion. The courses I took in this program taught me how to gather and analyze requirements, design maintainable architectures, and evaluate tradeoffs between competing implementation strategies. The project artifacts included in this portfolio demonstrate each of these skills; currently, mainly through the migration of the Travlr Getaways application from the MEAN stack to a Go backend with a PostgreSQL database. The enhancement process for that project required careful consideration of modularity, maintainability, scalability, security, and long-term supportability.
 
-SNHU's Computer Science program also strengthened my understanding of data structures and algorithms. Developing good software requires a lot more than just making your code work; it requires optimizing performance, ensuring scalability, and keeping code efficient and reliable. Through coursework and project development, I learned how algorithmic decisions impact each of these factors and how to analyze that impact to produce better code. These concepts influence the design of my enhanced artifacts, especially in areas involving authentication workflows, request processing, and database interactions.
+This portfolio highlights selected academic, personal, and professional projects that demonstrate my approach to backend engineering, secure software development, and practical problem solving.
 
-### Enhancement Artifacts
+### Backend Engineering Fit
 
-Database design and management are both areas of interest for me, and I've grown a lot in these throughout my coursework. Many of my classes focused on designing reliable systems for storing, retrieving, and managing information while maintaining security and data integrity, using both SQL and NoSQL databases. The database enhancement artifact in the Travlr Getaways project demonstrates my competency through the migration of its database from MongoDB to PostgreSQL. This enhancement required implementing my own database access middleware, designing a relational schema to replicate a document-oriented data shape effectively, creating migrations, and adapting application logic to support a more structured relational database environment. The project demonstrates both practical database development skills and an understanding of the tradeoffs between different database technologies.
 
-Cybersecurity is also a very important consideration for me, and was a heavy focus in the Travlr Getaways project, particularly in the algorithms and data structures enhancement, which implemented the authentication workflow. Secure software development involves protecting user data, validating input, implementing authentication correctly, and mitigating common vulnerabilities. This was a consideration in each enhancement artifact for this project: my database design includes a table for JWTs that supports expiration and revocation; protected endpoints are wrapped in an authentication layer; and user authentication was carefully implemented with RSA signing for JWTs and secure password hashing with Argon2id. These enhancements improved both the security posture and maintainability of the application as a whole, while reinforcing the importance of making security considerations from the earliest points of the software development process.
+| Role Requirement | Evidence in My Work |
+|-|-|
+| Object-oriented programming | Java coursework, WeatherWatcher TUI component design, C#/C++/Python production tools |
+| REST APIs and web services | Travlr Go API migration, WeatherAPI integration, Flask grade-reporting app |
+| Relational databases and SQL | PostgreSQL schema migration in Travlr, SQLite persistence in WeatherWatcher and Collins traceability tools |
+| Backend service architecture | Go backend redesign with routing, middleware, DTO validation, persistence layers, and logging |
+| Java / Spring Boot exposure | Spring Boot security coursework, Java mobile app coursework, JUnit testing in Eclipse |
+| AWS / Cloud exposure | AWS S3 exposure through Boot.dev coursework; deployed Travlr frontend/backend using Vercel and Render |
+| Testing and quality practices | JUnit, Go tests, Pytest, Google Test, Cppcheck, documented test plans |
+| Version control and workflows | Git-based portfolio and project repositories, feature-branch workflow in Travlr enhancement |
+| Linux and Windows environments | Windows professional tooling, Ubuntu daily driver experience, macOS personal development environment |
+| Data integrity and traceability | Collins Aerospace SAP/barcode/SQLite tool, document dependency graph, audit-support automation |
+| Communication and collaboration | Quality engineering stakeholder tools, teaching background, technical narratives and code review presentation |
 
-My collaboration and communication skills also improved substantially throughout this degree. Software development is most often a team effort, and the ability to communicate technical concepts clearly is essential for success in a professional environment. Producing written analyses, project documentation, design narratives, and technical presentations has helped me develop the ability to explain technical decisions to both technical and non-technical audiences. The narratives and code review included in this portfolio reflect these communication skills and demonstrate the reasoning behind my design decisions.
 
-### Artifact Integration
+### Featured Work
 
-The main artifact I selected for this portfolio is Travlr Getaways, a full-stack travel management application that I originally developed using the MEAN stack for the CS-465 course at SNHU. This project was selected because it provides opportunities to demonstrate multiple areas of Computer Science competencies within a single application. My software engineering enhancement focuses on architectural improvements and backend redesign by reimplementing the endpoints served by the existing Express backend in Go. The database enhancement demonstrates relational database design and migration techniques with considerations for a source NoSQL database. The algorithms and data structures enhancement highlights secure authentication workflows, use of industry-standard password hashing algorithms, validation practices, and token management, as well as object design; all of which support secure interaction with the backend. As a whole, these enhancements show how I can employ my competency in software engineering, databases, and data structures and algorithms to create professional-quality software systems.
+- [Travlr Getaways]({{ '/academic-projects/travlr/' | relative_url }})
+- [WeatherWatcher TUI]({{ '/personal-projects/weather-watcher/' | relative_url }})
 
-### Program Outcomes
+### Focus Areas
 
-This portfolio demonstrates achievement of the five Computer Science program outcomes. The artifacts showcase my ability to use strategies to create collaborative and maintainable software environments, design and deliver professional-quality computing solutions, evaluate existing solutions using industry-standards and best practices, apply innovative techniques and technologies to solve problems, and communicate technical information effectively to diverse audiences. Each enhancement shows strong evidence toward achievement of one or more of these outcomes, while the portfolio as a whole demonstrates the integration of these competencies into a cohesive, functioning body of work.
-
-### Conclusion
-
-Completing this degree has prepared me for continued professional growth in software engineering by providing me with both theoretical knowledge and practical development experience, while reinforcing the importance of maintainability, security, testing, and thoughtful system design. As I continue pursuing backend software engineering opportunities, the knowledge and skills I've developed throughout this program will serve as the foundation for future growth and professional contributions. This ePortfolio represents both the culmination of my academic work and the beginning of my continued growth as a software engineer.
+- Backend Systems 
+- Database Design 
+- Software Security 
+- Software Testing 
+- Object-Oriented Programming 
+- API Development

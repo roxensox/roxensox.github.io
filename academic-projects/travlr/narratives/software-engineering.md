@@ -1,7 +1,7 @@
 ---
 layout: default
 title: SWE
-permalink: /travlr/narratives/software-engineering/
+permalink: /academic-projects/travlr/narratives/software-engineering/
 ---
 
 # Software Engineering Enhancement
