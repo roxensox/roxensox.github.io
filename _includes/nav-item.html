@@ -1,0 +1,40 @@
+{% assign nav_item = include.item %}
+{% assign current_url = include.current_url %}
+{% assign dropdown_class = include.dropdown_class | default: 'nav-dropdown' %}
+{% assign child_container_class = include.child_container_class | default: 'nav-dropdown__menu' %}
+{% assign show_overview = include.show_overview | default: false %}
+
+{% if nav_item.children %}
+	{% assign visible_child_count = 0 %}
+	{% if show_overview and nav_item.url and nav_item.url != current_url %}
+		{% assign visible_child_count = visible_child_count | plus: 1 %}
+	{% endif %}
+	{% for child in nav_item.children %}
+		{% unless child.url == current_url %}
+			{% assign visible_child_count = visible_child_count | plus: 1 %}
+		{% endunless %}
+	{% endfor %}
+	{% if visible_child_count > 0 %}
+	<details class="{{ dropdown_class }}">
+		<summary>{{ nav_item.title }}</summary>
+		<div class="{{ child_container_class }}">
+			{% if show_overview and nav_item.url %}
+				{% unless nav_item.url == current_url %}
+				<a href="{{ nav_item.url | relative_url }}">Overview</a>
+				{% endunless %}
+			{% endif %}
+			{% for child in nav_item.children %}
+				{% include nav-item.html item=child current_url=current_url dropdown_class='nav-dropdown__nested' child_container_class='nav-dropdown__submenu' show_overview=true %}
+			{% endfor %}
+		</div>
+	</details>
+	{% endif %}
+{% elsif nav_item.external %}
+	{% unless nav_item.url == current_url %}
+	<a href="{{ nav_item.url }}">{{ nav_item.title }}</a>
+	{% endunless %}
+{% elsif nav_item.url %}
+	{% unless nav_item.url == current_url %}
+	<a href="{{ nav_item.url | relative_url }}">{{ nav_item.title }}</a>
+	{% endunless %}
+{% endif %}

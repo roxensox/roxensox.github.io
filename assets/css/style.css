@@ -62,6 +62,21 @@ header {
 	border-bottom: 1px solid var(--border-color);
 }
 
+.site-heading {
+	margin-bottom: 0.75rem;
+}
+
+.site-heading span {
+	display: block;
+}
+
+.site-heading__page {
+	margin-top: 0.35rem;
+	color: var(--muted-text);
+	font-size: 1rem;
+	font-weight: 500;
+}
+
 h1,
 h2,
 h3,

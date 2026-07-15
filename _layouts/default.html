@@ -14,7 +14,12 @@
 {% assign current_url = page.url %}
 <body class="theme-{{ section_slug }}{% if subsection_slug != nil and subsection_slug != '' %} theme-{{ section_slug }}-{{ subsection_slug }}{% endif %}">
 	<header>
-		<h1>{{ site.title }}</h1>
+		<h1 class="site-heading">
+			<span>{{ site.title }}</span>
+			{% unless page.title == 'Home' %}
+			<span class="site-heading__page">{{ page.title }}</span>
+			{% endunless %}
+		</h1>
 		<nav class="site-nav">
 			{% for item in site.data.navigation %}
 			{% assign should_show = true %}
@@ -35,71 +40,13 @@
 					{% assign is_active_section = true %}
 				{% endif %}
 				{% if item.children %}
-				{% if is_active_section %}
-				{% assign visible_child_count = 0 %}
-				{% for child in item.children %}
-					{% unless child.url == current_url %}
-						{% assign visible_child_count = visible_child_count | plus: 1 %}
-					{% endunless %}
-				{% endfor %}
-				{% if visible_child_count > 0 %}
-				<details class="nav-dropdown">
-					<summary>{{ item.title }}</summary>
-					<div class="nav-dropdown__menu">
-						{% for child in item.children %}
-							{% if child.children %}
-							<details class="nav-dropdown__nested">
-								<summary>{{ child.title }}</summary>
-								<div class="nav-dropdown__submenu">
-									{% if child.url %}
-									{% unless child.url == current_url %}
-									<a href="{{ child.url | relative_url }}">Overview</a>
-									{% endunless %}
-									{% endif %}
-									{% for grandchild in child.children %}
-										{% unless grandchild.url == current_url %}
-										{% if grandchild.children %}
-										<details class="nav-dropdown__nested">
-											<summary>{{ grandchild.title }}</summary>
-											<div class="nav-dropdown__submenu">
-												{% for item_child in grandchild.children %}
-													{% unless item_child.url == current_url %}
-													{% if item_child.external %}
-													<a href="{{ item_child.url }}">{{ item_child.title }}</a>
-													{% else %}
-													<a href="{{ item_child.url | relative_url }}">{{ item_child.title }}</a>
-													{% endif %}
-													{% endunless %}
-												{% endfor %}
-											</div>
-										</details>
-										{% elsif grandchild.external %}
-										<a href="{{ grandchild.url }}">{{ grandchild.title }}</a>
-										{% else %}
-										<a href="{{ grandchild.url | relative_url }}">{{ grandchild.title }}</a>
-										{% endif %}
-										{% endunless %}
-									{% endfor %}
-								</div>
-							</details>
-							{% elsif child.external %}
-							{% unless child.url == current_url %}
-							<a href="{{ child.url }}">{{ child.title }}</a>
-							{% endunless %}
-							{% else %}
-							{% unless child.url == current_url %}
-							<a href="{{ child.url | relative_url }}">{{ child.title }}</a>
-							{% endunless %}
-							{% endif %}
-						{% endfor %}
-					</div>
-				</details>
-				{% endif %}
-				{% else %}
-				{% unless item.url == current_url %}
-				<a href="{{ item.url | relative_url }}">{{ item.title }}</a>
-				{% endunless %}
-				{% endif %}
+					{% if is_active_section %}
+						{% include nav-item.html item=item current_url=current_url %}
+					{% else %}
+						{% unless item.url == current_url %}
+						<a href="{{ item.url | relative_url }}">{{ item.title }}</a>
+						{% endunless %}
+					{% endif %}
 				{% elsif item.url %}
 				{% unless item.url == current_url %}
 				<a href="{{ item.url | relative_url }}">{{ item.title }}</a>
@@ -107,6 +54,23 @@
 				{% endif %}
 			{% endif %}
 			{% endfor %}
+			{% assign active_project = nil %}
+			{% for nav_section in site.data.navigation %}
+				{% if nav_section.children %}
+					{% for nav_child in nav_section.children %}
+						{% if nav_child.children and nav_child.url and nav_child.url != nav_section.url %}
+							{% if current_url contains nav_child.url %}
+								{% assign active_project = nav_child %}
+							{% endif %}
+						{% endif %}
+					{% endfor %}
+				{% endif %}
+			{% endfor %}
+			{% if active_project %}
+				{% for project_section in active_project.children %}
+					{% include nav-item.html item=project_section current_url=current_url dropdown_class='nav-dropdown nav-dropdown--context' show_overview=true %}
+				{% endfor %}
+			{% endif %}
 		</nav>
 	</header>
 	<main>
