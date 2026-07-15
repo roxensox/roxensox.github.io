@@ -4,56 +4,87 @@ title: Home
 permalink: /
 ---
 
-## Introduction
+<div class="home-grid" markdown="1">
 
-I am a software developer focused on back-end systems with experience in Python, Go, API design and implementation, security practices, and object-oriented design. My background shows a clear through-line of applying computer science concepts to solve problems in diverse domains, including education and aerospace manufacturing quality. Through my professional experience, I've developed a strong aptitude for communicating with both technical and non-technical stakeholders and translating practical problems into software solutions.
+<section class="home-card home-card--intro" markdown="1">
+## Backend Software Developer
 
-Throughout this work, I gained experience with modern testing practices using JUnit, Go's testing framework, Pytest, and Google Test (gtest). I also incorporated static analysis tools such as Cppcheck to identify defects early and reinforce secure coding practices. I also gained direct experience with Java, Gradle, Maven, and Spring Boot through several courses. One class was centered around building a mobile application purely in Java, which required extensive work with modifying the `build.gradle` file for the project; another required implementing security features and performing static analysis on a pre-built Spring Boot application; and a third required fully developing and testing a basic demo program using JUnit testing in Eclipse.
+I build practical backend and tooling solutions with Python, Go, SQL, REST APIs, object-oriented design, and secure software practices. My work connects computer science fundamentals with real operational problems in aerospace manufacturing quality, education, and personal software projects.
 
-In my professional work, I've developed advanced solutions to problems as a teacher in Thailand and as a Quality Tech at Collins Aerospace in Jamestown, ND. As a teacher, I used Python to create a web app with Flask that allows teachers to store grade data and output it to the school's specified format, and at Collins Aerospace I developed numerous software solutions, some of which can be seen in the table below:
+I am especially interested in backend services, data integrity, traceability, API design, testing, and systems that make complicated workflows easier to trust.
+</section>
 
-| Problem | Solution | Tools | Impacts |
-|-|-|-|-|
-| Document relationships are hard to track for audits | Built a document dependency graph that visualized and propagated non-compliance notifications through parent-child relationships | C#, Windows Forms | Traceability, data integrity, audit support |
-| Products are being shipped with incorrect serial numbers attached, and the operators responsible can't be identified | Integrated with SAP to retrieve expected serial numbers, stored them with SQLite, and built a barcode-scanning application that logged operator changes for traceability | C++, Windows Forms, SQLite | Traceability, data integrity, asset/process tracking |
-| CMM Reports are difficult to look up on the computer, making it very time consuming for inspectors to verify CMM errors | Created a shell script to open a CMM report based on various file identifiers (part number, date, and order number) in the user's text editor of choice | PowerShell, Windows Forms | Data integrity, traceability, process improvement |
-| New inspectors take a long time to learn to write QNs and need reference material to work from | Created a GUI to look up QNs by part number and import the necessary data into a text file for inspectors to reference | Python, TKinter, Win32COM | Data integrity, process improvement |
-| Processing document repository update reports takes several hours a week and requires excessive training for a new worker to take over | Created a Python script that processes report data and stores it in the Excel tracker | Python, Win32COM | Audit support, data integrity, process improvement |
-
-
-This portfolio highlights selected academic, personal, and professional projects that demonstrate my approach to backend engineering, secure software development, and practical problem solving.
-
-### Backend Engineering Fit
-
-
-| Role Requirement | Evidence in My Work |
-|-|-|
-| Object-oriented programming | Java coursework, WeatherWatcher TUI component design, C#/C++/Python production tools |
-| REST APIs and web services | Travlr Go API migration, WeatherAPI integration, Flask grade-reporting app |
-| Relational databases and SQL | PostgreSQL schema migration in Travlr, SQLite persistence in WeatherWatcher and Collins traceability tools |
-| Backend service architecture | Go backend redesign with routing, middleware, DTO validation, persistence layers, and logging |
-| Java / Spring Boot exposure | Spring Boot security coursework, Java mobile app coursework, JUnit testing in Eclipse |
-| Cloud and infrastructure exposure | AWS S3, AWS CLI/IAM, CloudFront, and Docker exposure through Boot.dev coursework; deployed Travlr frontend/backend using Vercel and Render |
-| Testing and quality practices | JUnit, Go tests, Pytest, Google Test, Cppcheck, documented test plans |
-| Version control and workflows | Git-based portfolio and project repositories, feature-branch workflow in Travlr enhancement |
-| Linux and Windows environments | Windows professional tooling, Ubuntu daily driver experience, macOS personal development environment |
-| Data integrity and traceability | Collins Aerospace SAP/barcode/SQLite tool, document dependency graph, audit-support automation |
-| Communication and collaboration | Quality engineering stakeholder tools, teaching background, technical narratives and code review presentation |
-
+<section class="home-card" markdown="1">
 ### Featured Work
 
-- [Travlr Getaways]({{ '/academic-projects/travlr/' | relative_url }})
-- [WeatherWatcher TUI]({{ '/personal-projects/weather-watcher/' | relative_url }})
+**[Travlr Getaways]({{ '/academic-projects/travlr/' | relative_url }})**  
+Go REST API migration with PostgreSQL, authentication, request validation, response transformation, and Angular client compatibility.
 
-### Focus Areas
+**[WeatherWatcher TUI]({{ '/personal-projects/weather-watcher/' | relative_url }})**  
+Python terminal application integrating WeatherAPI with SQLite persistence, modular TUI components, and Pytest coverage.
+</section>
 
-- Backend Systems 
-- Database Design 
-- Software Security 
-- Software Testing 
-- Object-Oriented Programming 
-- API Development
+<section class="home-card" markdown="1">
+### Core Strengths
 
+- Backend service design
+- REST API development
+- Relational database design
+- Software testing
+- Object-oriented programming
+- Secure development practices
+- Data integrity and traceability
+- Technical communication
+</section>
+
+<section class="home-card home-card--wide" markdown="1">
+### Backend Engineering Fit
+
+**APIs and service architecture**  
+Travlr Go API migration, WeatherAPI integration, Flask grade-reporting app, routing, middleware, DTO validation, persistence layers, and logging.
+
+**Databases and data integrity**  
+PostgreSQL schema migration in Travlr, SQLite persistence in WeatherWatcher, and Collins Aerospace traceability tools built around SAP, serial numbers, audit support, and document relationships.
+
+**Java, Spring Boot, and object-oriented design**  
+Java coursework, Spring Boot security coursework, JUnit testing in Eclipse, Java mobile app coursework, and object-oriented component design in WeatherWatcher and production tooling.
+
+**Cloud, infrastructure, and deployment**  
+AWS S3, AWS CLI/IAM, CloudFront, and Docker exposure through Boot.dev coursework; Travlr frontend/backend deployment using Vercel and Render.
+
+**Testing and quality practices**  
+JUnit, Go tests, Pytest, Google Test, Cppcheck, documented test plans, and professional quality workflows in aerospace manufacturing.
+
+**Version control and environments**  
+Git-based portfolio and project repositories, feature-branch workflow in the Travlr enhancement, Windows professional tooling, Ubuntu daily driver experience, and macOS personal development.
+</section>
+
+<section class="home-card home-card--wide" markdown="1">
+### Professional Software Work
+
+- Built a document dependency graph that visualized parent-child relationships and propagated non-compliance notifications for audit support.
+- Integrated SAP serial-number data with SQLite and barcode-scanning workflows to improve product traceability and operator accountability.
+- Automated recurring manufacturing reporting workflows with Python and Win32COM.
+- Created inspector support tools for report lookup, QN reference generation, and document repository updates.
+- Translated quality engineering and inspection problems into practical software tools used in manufacturing workflows.
+
+[Professional Experience]({{ '/professional-experience/' | relative_url }})
+</section>
+
+<section class="home-card" markdown="1">
+### Academic Breadth
+
+SNHU coursework added experience with Java, C++, Go, Python, software security, QA/testing, SQL and NoSQL databases, mobile architecture, AI/ML principles, version control, and reverse engineering.
+
+[Academic Projects]({{ '/academic-projects/' | relative_url }})
+</section>
+
+<section class="home-card" markdown="1">
 ### Supporting Coursework
 
-- [Boot.dev Coursework]({{ '/bootdev-experience/' | relative_url }})
+Boot.dev coursework supports my backend, cloud, and infrastructure fundamentals, including Docker, AWS S3, AWS CLI/IAM, CloudFront, HTTP clients and servers, SQL, Go, and Python.
+
+[Boot.dev Experience]({{ '/bootdev-experience/' | relative_url }})
+</section>
+
+</div>
