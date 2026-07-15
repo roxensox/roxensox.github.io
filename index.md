@@ -33,7 +33,7 @@ This portfolio highlights selected academic, personal, and professional projects
 | Relational databases and SQL | PostgreSQL schema migration in Travlr, SQLite persistence in WeatherWatcher and Collins traceability tools |
 | Backend service architecture | Go backend redesign with routing, middleware, DTO validation, persistence layers, and logging |
 | Java / Spring Boot exposure | Spring Boot security coursework, Java mobile app coursework, JUnit testing in Eclipse |
-| AWS / Cloud exposure | AWS S3 exposure through Boot.dev coursework; deployed Travlr frontend/backend using Vercel and Render |
+| Cloud and infrastructure exposure | AWS S3, AWS CLI/IAM, CloudFront, and Docker exposure through Boot.dev coursework; deployed Travlr frontend/backend using Vercel and Render |
 | Testing and quality practices | JUnit, Go tests, Pytest, Google Test, Cppcheck, documented test plans |
 | Version control and workflows | Git-based portfolio and project repositories, feature-branch workflow in Travlr enhancement |
 | Linux and Windows environments | Windows professional tooling, Ubuntu daily driver experience, macOS personal development environment |
@@ -54,6 +54,6 @@ This portfolio highlights selected academic, personal, and professional projects
 - Object-Oriented Programming 
 - API Development
 
-### Additional Coursework
+### Supporting Coursework
 
 - [Boot.dev Coursework]({{ '/bootdev-experience/' | relative_url }})

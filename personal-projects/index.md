@@ -10,7 +10,7 @@ These are green-field projects that I decided to do to either solve a personal p
 
 ### Current Projects:
 
-- [WeatherWatcherTUI (2025-Present)]({{ 'personal-projects/weather-watcher/' | relative_url }})
+- [WeatherWatcherTUI (2025-Present)]({{ '/personal-projects/weather-watcher/' | relative_url }})
 
 ### Notable Skills and Tech:
 
