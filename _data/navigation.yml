@@ -47,9 +47,3 @@
         - title: Source Code
           url: https://github.com/roxensox/WeatherWatcherTUI
           external: true
-
-- title: Boot.dev Projects
-  url: /bootdev-projects/
-  children:
-    - title: Overview
-      url: /bootdev-projects/

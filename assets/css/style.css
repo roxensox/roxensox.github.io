@@ -31,6 +31,22 @@ body.theme-academic-projects {
 	--accent-color: #bb9af7;
 }
 
+body.theme-personal-projects {
+	--page-bg: #10141f;
+	--text-color: #c8d3f5;
+	--muted-text: #9da8c6;
+	--heading-color: #ffc777;
+	--link-color: #4fd6be;
+	--link-hover: #82aaff;
+	--border-color: #3d4a6d;
+	--surface-color: #1b2133;
+	--surface-hover: #242b40;
+	--shadow-color: rgba(3, 8, 18, 0.48);
+	--code-bg: #0d111b;
+	--code-border: #4fd6be;
+	--accent-color: #c3e88d;
+}
+
 body {
 	max-width: 760px;
 	margin: 0 auto;
