@@ -8,7 +8,7 @@ permalink: /personal-projects/
 
 These are green-field projects that I decided to do to either solve a personal problem I encountered, or to learn and test my skills as a developer.
 
-### Current projects:
+### Current Projects:
 
 - [WeatherWatcherTUI (2025-Present)]({{ 'personal-projects/weather-watcher/' | relative_url }})
 
