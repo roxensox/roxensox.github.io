@@ -129,6 +129,14 @@ table {
 	margin-top: 1rem;
 }
 
+body:not(.theme-home) main {
+	overflow-x: auto;
+}
+
+body:not(.theme-home) table {
+	min-width: 680px;
+}
+
 th,
 td {
 	border: 1px solid var(--border-color);
