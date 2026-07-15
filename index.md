@@ -40,7 +40,6 @@ This portfolio highlights selected academic, personal, and professional projects
 | Data integrity and traceability | Collins Aerospace SAP/barcode/SQLite tool, document dependency graph, audit-support automation |
 | Communication and collaboration | Quality engineering stakeholder tools, teaching background, technical narratives and code review presentation |
 
-
 ### Featured Work
 
 - [Travlr Getaways]({{ '/academic-projects/travlr/' | relative_url }})
@@ -54,3 +53,7 @@ This portfolio highlights selected academic, personal, and professional projects
 - Software Testing 
 - Object-Oriented Programming 
 - API Development
+
+### Additional Coursework
+
+- [Boot.dev Coursework]({{ '/bootdev-experience/' | relative_url }})
