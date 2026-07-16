@@ -9,7 +9,7 @@ permalink: /personal-projects/weather-watcher/
 
 WeatherWatcher TUI is a terminal-based weather application that retrieves current weather information from WeatherAPI and presents it through a text user interface. The application persists user location preferences in SQLite and provides a menu-driven interface for configuring and switching between saved locations.
 
-The project's github repository [can be found here.](https://github.com/roxensox/WeatherWatcherTUI)
+The project's GitHub repository [can be found here.](https://github.com/roxensox/WeatherWatcherTUI)
 
 ### Tools
 

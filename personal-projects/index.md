@@ -10,11 +10,14 @@ These are green-field projects that I decided to do to either solve a personal p
 
 ### Current Projects:
 
-- [WeatherWatcherTUI (2025-Present)]({{ '/personal-projects/weather-watcher/' | relative_url }})
+- [WeatherWatcherTUI]({{ '/personal-projects/weather-watcher/' | relative_url }})
+- [CoffeeShop (Work in Progress)]({{ '/personal-projects/coffeeshop/' | relative_url }})
 
 ### Notable Skills and Tech:
 
 - Python
+- Java
+- Spring Boot
 - HTTP Requests
 - Object-oriented design
 - Testing frameworks

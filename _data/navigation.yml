@@ -50,3 +50,9 @@
         - title: Source Code
           url: https://github.com/roxensox/WeatherWatcherTUI
           external: true
+    - title: CoffeeShop
+      url: /personal-projects/coffeeshop/
+      children:
+        - title: Source Code
+          url: https://github.com/roxensox/CoffeeShop
+          external: true
